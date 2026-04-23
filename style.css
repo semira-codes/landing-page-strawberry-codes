@@ -139,6 +139,7 @@ ul {
   color: #453848;
   font-weight: 600;
   font-size: 0.95rem;
+  
 }
 
 .menu-toggle {
@@ -480,9 +481,7 @@ ul {
   }
 
   .site-nav {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    display: none;
     position: absolute;
     top: 74px;
     right: 5%;
@@ -494,10 +493,15 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  
+  }
+
+  .site-nav a {
+    display: block;
+    width: 100%;
   }
 
   .site-nav.active {
-    max-height: 300px;
     display: flex;
   }
 
@@ -652,4 +656,17 @@ ul {
     font-size: 13px;
     padding: 8px 12px;
   }
+}
+
+/* Mobile tap effect only */
+button:active,
+.btn:active,
+.card:active {
+  transform: scale(0.97);
+}
+
+button,
+.btn,
+.card {
+  transition: all 0.2s ease;
 }
